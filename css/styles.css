@@ -1,0 +1,62 @@
+
+    * {
+        box-sizing: border-box;
+    }  
+      body {
+        background-color: black;
+        color: yellow;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+
+      .fondo {
+        position: relative; /* Posición relativa para que Pacman se mueva sobre él */
+        background-image: url('assets/pacman-imagen.jpg'); /* Fondo de la imagen */
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        width: 100%;
+        overflow: hidden; /* Evitar que el Pacman se salga del contenedor */
+      }
+
+      .pacmanmotion {
+        position: absolute;
+        top: 50%;
+        left: -17rem; /* Empieza fuera de la pantalla */
+        transform: translateY(-50%);
+        animation: movePacman 5s linear infinite; /* Animación del Pacman */
+      }
+
+      @keyframes movePacman {
+        0% {
+          left: -17rem; /* Fuera del contenedor por la izquierda */
+        }
+        100% {
+          left: 100%; /* Se desplaza a la derecha, saliendo del contenedor */
+        }
+      }
+
+      .titulo-principal {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 20px;
+      }
+
+      .centrar-texto {
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      ul li a {
+        color: yellow;
+        text-decoration: none;
+      }
+
+      ul li a:hover {
+        color: red;
+      }
